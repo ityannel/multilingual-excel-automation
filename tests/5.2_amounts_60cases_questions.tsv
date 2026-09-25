@@ -1,0 +1,61 @@
+case_id	office	amount	content	truth_separator	truth_value	note
+L01	Paris	1,879	Le prix du gazole au litre indiqué sur la facture de notre flotte me semble élevé, pouvez-vous confirmer ce tarif ?	decimal	1.879	Diesel price per litre is under 2 € and quoted to three decimals; French writer uses comma as decimal.
+L02	New York	142.375	Can you tell me the per-share price at which my limit order for the index ETF was filled this morning?	decimal	142.375	Share fill prices are often quoted to fractions of a cent; English writer uses dot as decimal.
+L03	Tokyo	8.500	東京の賃貸マンションの毎月の管理費として請求された金額ですが、契約書と合っているか確認してください。	thousands	8500	Monthly condo management fee in yen; 8.5 yen is impossible and yen has no fractional unit.
+L04	Paris	1,850	Le loyer mensuel de l'appartement de trois pièces que je loue à Montmartre a été prélevé deux fois, pouvez-vous vérifier ?	thousands	1850	Monthly rent for a Paris flat cannot be 1.85 €; context overrides the French comma-decimal habit.
+L05	New York	7.850	What per-pound price did you use for the wholesale coffee beans on our last order?	decimal	7.85	Wholesale coffee per pound costs a few dollars; English writer uses dot as decimal.
+L06	Tokyo	147.325	先月の送金で適用されたドル円の為替レートを教えてください。	decimal	147.325	USD/JPY exchange rate is quoted around this level with three decimals.
+L07	Paris	2,880	Le montant de la taxe de séjour par nuit et par personne facturé par l'hôtel est-il correct ?	decimal	2.88	Tourist tax per night per person is a few euros; French writer uses comma as decimal.
+L08	New York	6.400	This is the total on the catering invoice for our office holiday party, which covered about eighty guests.	thousands	6400	Catering for about eighty guests costs thousands of dollars, not 6.40; dot used as thousands separator.
+L09	Tokyo	1.875	この金額で合っていますか？	thousands	1875	VAGUE: Tokyo office implies yen, which has no decimal subunit, so 1.875 yen is implausible; read as thousands.
+L10	Paris	8,250	Le safran que nous achetons est facturé au gramme ; ce prix unitaire correspond-il bien à votre catalogue ?	decimal	8.25	Saffron per gram costs a few euros; French writer uses comma as decimal.
+L11	New York	2.375	Here is the number you asked for.	decimal	2.375	VAGUE: English writer and New York office both use dot as decimal; no context suggests otherwise.
+L12	Tokyo	31.250	今月の電気料金の明細にある、キロワット時あたりの電力量料金単価について質問があります。	decimal	31.25	Electricity unit price per kWh in Japan is about 30 yen and billed with decimals.
+L13	Paris	2,750	Merci de vérifier ce montant.	decimal	2.75	VAGUE: French writer at the Paris office; comma is the normal decimal separator, so decimal is most likely.
+L14	New York	1.625	Please confirm this amount.	decimal	1.625	VAGUE: English writer at the New York office; dot is the normal decimal separator.
+L15	Tokyo	14.900	動画配信サービスの年額プランに切り替えたときに請求された料金について問い合わせます。	thousands	14900	An annual streaming plan in yen costs thousands of yen; 14.9 yen is impossible.
+L16	Paris	4,125	Voici le montant demandé.	decimal	4.125	VAGUE: French writer at the Paris office; comma is read as the decimal separator by default.
+L17	New York	6.125	Is this the fixed annual interest rate you quoted on my mortgage application, or does it include points?	decimal	6.125	Mortgage interest rates are percentages quoted to eighths, e.g. 6.125%.
+L18	Tokyo	86.000	来月の引っ越しについて、御社から届いた見積もりの総額が高すぎる気がします。	thousands	86000	A moving company quote in yen is tens of thousands of yen; 86 yen is impossible.
+L19	Paris	3,600	Pouvez-vous confirmer ce chiffre ?	decimal	3.6	VAGUE: French writer at the Paris office; comma-decimal convention makes decimal most likely.
+L20	New York	3.875	Is this right?	decimal	3.875	VAGUE: English writer at the New York office; dot is the decimal separator by default.
+L21	Tokyo	5.500	お振込みした金額です。	thousands	5500	VAGUE: A bank transfer at the Tokyo office is in yen, which has no fractional unit; read as thousands.
+L22	Paris	3,450	Mon salaire net mensuel sur la fiche de paie de septembre ne correspond pas à mon contrat de cadre.	thousands	3450	A manager's monthly net salary is thousands of euros; context overrides the comma-decimal habit.
+L23	New York	5.450	What rate per kilogram are you charging for air cargo from JFK to Paris?	decimal	5.45	Air cargo rates per kilogram are a few dollars; English writer uses dot as decimal.
+L24	Tokyo	3.240	先日の歯科治療で窓口で支払った自己負担額が、保険適用後にしては高いように思います。	thousands	3240	A dental copay in yen is thousands of yen; 3.24 yen is impossible.
+L25	Paris	2,400	I'm disputing the security deposit you withheld when I moved out of the apartment in the Marais.	thousands	2400	English writer uses comma as thousands separator, and a rental deposit is thousands of euros.
+L26	New York	24.500	Voici le devis du plombier pour refaire entièrement la salle de bains de mon appartement à Brooklyn.	thousands	24500	French writer uses dot as thousands separator, and a full bathroom renovation costs thousands.
+L27	Tokyo	12.500	Is this the commission rate, as a percentage, that your gallery takes on consignment sales of my prints?	decimal	12.5	A commission rate is a percentage; 12.5% is plausible while 12500% is not.
+L28	Paris	1,250	Here is the amount for last week.	thousands	1250	VAGUE: English writer; in English the comma is a thousands separator, so thousands is most likely.
+L29	New York	3.750	Voici le montant pour la semaine dernière.	thousands	3750	VAGUE: French writer; in French usage a dot groups thousands, so thousands is most likely.
+L30	Tokyo	35.000	How much is the monthly fee for a dedicated desk at your coworking space in Shibuya?	thousands	35000	A monthly coworking fee in Tokyo is tens of thousands of yen; 35 yen is impossible.
+L31	Paris	6,300	Please process this payment.	thousands	6300	VAGUE: English writer; comma is read as a thousands separator in English.
+L32	New York	9.600	Merci de traiter ce paiement.	thousands	9600	VAGUE: French writer; a dot in a French-written amount is a thousands separator.
+L33	Tokyo	4.400	Here's what I paid.	thousands	4400	VAGUE: Tokyo office implies yen, which has no decimal subunit; a payment of 4.4 yen is implausible.
+L34	Paris	1,150	The wholesale price per croissant on your invoice is higher than the unit price we agreed for our café.	decimal	1.15	A single croissant costs around one euro; context overrides the English comma-thousands habit.
+L35	New York	1.290	Quel est le tarif par minute des appels internationaux vers la France sur mon forfait mobile ?	decimal	1.29	A per-minute call rate cannot be 1290 dollars; context overrides the French dot-thousands habit.
+L36	Tokyo	2.980	Please refund this.	thousands	2980	VAGUE: Tokyo office implies a yen refund; yen has no fractional unit, so thousands is most likely.
+L37	Paris	38,500	What is the annual tuition fee for the international MBA programme starting this autumn?	thousands	38500	English writer uses comma as thousands separator, and MBA tuition is tens of thousands of euros.
+L38	New York	7.500	La prime de fin d'année versée sur mon compte ne correspond pas à ce qui était prévu dans mon contrat.	thousands	7500	French writer uses dot as thousands separator, and a year-end bonus is thousands of dollars.
+L39	Tokyo	58.200	This is the total for the bullet train tickets we booked for our group of twelve from Tokyo to Kyoto.	thousands	58200	Shinkansen tickets for a group of twelve cost tens of thousands of yen, not 58 yen.
+L40	Paris	5,200	Can you check this figure?	thousands	5200	VAGUE: English writer; comma is a thousands separator in English.
+L41	New York	2.150	Voilà ce que je vous dois.	thousands	2150	VAGUE: French writer; a dot in French-written numbers groups thousands.
+L42	Tokyo	42.500	What dividend per share, in yen, will be paid for the interim period?	decimal	42.5	Dividends per share in yen are often fractional (e.g. 42.5 yen); a per-share dividend of 42500 yen is implausible.
+L43	Paris	1,500	パリ滞在中にスピード違反で科された罰金について、この金額は正しいですか？	thousands	1500	Japanese writer uses comma as thousands separator; a severe speeding fine in France can reach this, and 1.5 € is not a fine.
+L44	New York	112.450	ニューヨークで購入した金地金のグラムあたりのドル単価を確認したいです。	decimal	112.45	Gold costs around a hundred dollars per gram; Japanese writer uses dot as decimal.
+L45	Tokyo	30.000	Quels sont les frais de dossier de l'agence pour ma demande de visa de travail au Japon ?	thousands	30000	French writer uses dot as thousands separator, and agency fees in yen are tens of thousands.
+L46	Paris	7,800	この金額でお願いします。	thousands	7800	VAGUE: Japanese writer; in Japanese the comma is a thousands separator.
+L47	New York	5.250	こちらの数字をご確認ください。	decimal	5.25	VAGUE: Japanese writer at the New York office; both use dot as decimal and dollars have cents.
+L48	Tokyo	6.750	Voici le montant de la facture.	thousands	6750	VAGUE: French writer uses dot for thousands, and the Tokyo office bills in yen with no fractional unit.
+L49	Paris	4,800	パリ市内の駐車場の時間あたりの料金はこれで合っていますか？	decimal	4.8	Hourly parking in Paris costs a few euros; context overrides the Japanese comma-thousands habit.
+L50	New York	3.480	マンハッタンのホテルに一週間泊まった宿泊費の合計を確認してください。	thousands	3480	A week in a Manhattan hotel costs thousands of dollars; 3.48 dollars is impossible.
+L51	Tokyo	98.000	Quel est le prix du forfait de ski pour toute la saison à Hakuba ?	thousands	98000	French writer uses dot as thousands separator, and a season ski pass costs tens of thousands of yen.
+L52	Paris	3,900	先週分の金額です。	thousands	3900	VAGUE: Japanese writer; comma is a thousands separator in Japanese.
+L53	New York	4.750	先月分です。	decimal	4.75	VAGUE: Japanese writer at the New York office; dot is the decimal separator in both, and dollar amounts have cents.
+L54	Tokyo	2.750	Le prix unitaire des vis que nous importons de votre usine, en yens par pièce, a-t-il changé ?	decimal	2.75	A single screw costs a few yen, and bulk component prices can be fractional yen; context overrides the French dot-thousands habit.
+L55	Paris	2,950	パリの家具店で注文したソファの代金について、請求額が見積もりと違います。	thousands	2950	Japanese writer uses comma as thousands separator, and a sofa costs thousands of euros.
+L56	New York	3.500	イエローキャブのマイルあたりの料金はこれで正しいですか？	decimal	3.5	The NYC taxi rate per mile is a few dollars; Japanese writer uses dot as decimal.
+L57	Tokyo	12.000	Voici la cotisation annuelle de l'association franco-japonaise que je dois régler.	thousands	12000	French writer uses dot as thousands separator, and an annual membership fee in yen is thousands of yen.
+L58	Paris	2,150	パリの地下鉄の一回分の運賃はこの金額で合っていますか？	decimal	2.15	A single Paris metro fare costs about two euros; context overrides the Japanese comma-thousands habit.
+L59	New York	6.800	留学生寮の一学期分の寮費として請求された金額について質問です。	thousands	6800	A semester of dorm fees costs thousands of dollars; 6.8 dollars is impossible.
+L60	Tokyo	8.800	Combien coûte le cours de cuisine japonaise d'une journée à Asakusa ?	thousands	8800	French writer uses dot as thousands separator, and a day-long cooking class costs thousands of yen.

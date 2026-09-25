@@ -1,0 +1,61 @@
+case_id	name	family_name	given_name	type	note
+N01	高橋翔	高橋	翔	full	2+1; common family name, 1-kanji given name
+N02	林美咲	林	美咲	full	1+2; 1-kanji family name
+N03	森誠	森	誠	full	1+1; shortest form, two single kanji
+N04	佐々木健太郎	佐々木	健太郎	full	3+3; family name contains 々
+N05	長谷川さくら	長谷川	さくら	full	3+3; given name in hiragana
+N06	五十嵐ユウキ	五十嵐	ユウキ	full	3+3; given name in katakana
+N07	小比類巻由美	小比類巻	由美	full	4+2; rare 4-kanji family name (こひるいまき)
+N08	勅使河原博	勅使河原	博	full	4+1; rare 4-kanji family name (てしがわら)
+N09	中村さくらこ	中村	さくらこ	full	2+4; 4-character hiragana given name
+N10	鈴木彦左衛門	鈴木	彦左衛門	full	2+4; old-style 4-kanji given name
+N11	井上エミリ	井上	エミリ	full	2+3; katakana given name
+N12	東海林誠一	東海林	誠一	full	3+2; rare reading (しょうじ)
+N13	四月一日真央	四月一日	真央	full	4+2; rare family name (わたぬき) made of numeral kanji
+N14	釜石まどか	釜石	まどか	full	2+3; less common family name, hiragana given name
+N15	百目鬼亮	百目鬼	亮	full	3+1; rare family name (どうめき)
+N16	薬袋直人	薬袋	直人	full	2+2; rare family name (みない)
+N17	服部あおい	服部	あおい	full	2+3; hiragana given name
+N18	小野寺ケン	小野寺	ケン	full	3+2; short katakana given name
+N19	堀恵	堀	恵	full	1+1; two single kanji
+N20	関口マリア	関口	マリア	full	2+3; katakana given name
+N21	大豆生田智子	大豆生田	智子	full	4+2; rare family name (おおまめうだ)
+N22	一ノ瀬蓮	一ノ瀬	蓮	full	3+1; family name contains katakana ノ
+N23	辻本ゆい	辻本	ゆい	full	2+2; hiragana given name
+N24	月見里明日香	月見里	明日香	full	3+3; rare family name (やまなし)
+N25	岡本ミシェル	岡本	ミシェル	full	2+4; 4-character katakana given name with small ェ
+N26	菊池紗也加	菊池	紗也加	full	2+3; 3-kanji given name
+N27	我妻陽菜	我妻	陽菜	full	2+2; less common family name (わがつま/あづま)
+N28	西園寺隼	西園寺	隼	full	3+1; 1-kanji given name after a 3-kanji family name
+N29	鬼頭ひかり	鬼頭	ひかり	full	2+3; less common family name, hiragana given name
+N30	阿久津大輔	阿久津	大輔	full	3+2; 3-kanji family name
+N31	田中	田中		family_only	Very common 2-kanji family name
+N32	林	林		family_only	1-kanji family name
+N33	佐々木	佐々木		family_only	3 characters with 々; should not be split
+N34	早乙女	早乙女		family_only	Could be misread as 早 + 乙女 (1+2); it is one family name (さおとめ)
+N35	宇佐美	宇佐美		family_only	Could be misread as 宇佐 + 美 (2+1); it is one family name
+N36	大和	大和		family_only	Also a common male given name (やまと)
+N37	千秋	千秋		family_only	Also a given name (ちあき); could be misread as 千 + 秋
+N38	日向	日向		family_only	Also a given name (ひなた)
+N39	東	東		family_only	1 kanji; also an ordinary word (east)
+N40	東海林	東海林		family_only	Could be misread as 東 + 海林 or 東海 + 林; one family name (しょうじ)
+N41	一二三	一二三		family_only	Looks like numerals or a given name (ひふみ); a real family name
+N42	左衛門三郎	左衛門三郎		family_only	5-kanji family name that looks like an old-style given name (さえもんさぶろう)
+N43	武者小路	武者小路		family_only	4 kanji; could be misread as 武者 + 小路
+N44	小鳥遊	小鳥遊		family_only	Rare family name (たかなし); could be misread as 小鳥 + 遊
+N45	平	平		family_only	1 kanji; also a rare given name (たいら)
+N46	日向葵	日向	葵	tricky	日向 + 葵 is natural; 日 + 向葵 is not a real name split
+N47	平真一	平	真一	tricky	平 + 真一 is natural; 平真 is not a family name
+N48	東和子	東	和子	tricky	東 + 和子 is natural; 東和 + 子 leaves an impossible given name
+N49	大和田真	大和田	真	tricky	大和田 + 真 is natural; 大和 + 田真 is not a real name split
+N50	山本田鶴子	山本	田鶴子	tricky	Given name 田鶴子 (たづこ) starts with 田; 山本田 is not a family name
+N51	和泉大和	和泉	大和	tricky	Both parts can be family names; family-first order gives 和泉 + 大和
+N52	小林小百合	小林	小百合	tricky	Repeated 小; 小林 + 小百合 is natural, not 小林小 + 百合
+N53	上田野乃花	上田	野乃花	tricky	Given name 野乃花 starts with 野; 上田野 is not a family name
+N54	早乙女花	早乙女	花	tricky	早乙女 + 花 is natural; 早 + 乙女花 is not a real name split
+N55	東海林大	東海林	大	tricky	東海林 (しょうじ) is one family name; 東海 + 林大 is not a real name split
+N56	森永一	森永	一	ambiguous	AMBIGUOUS: 森永 + 一 (はじめ) OR 森 + 永一 (えいいち); both are plausible
+N57	金田一真	金田一	真	ambiguous	AMBIGUOUS: 金田一 + 真 (まこと) OR 金田 + 一真 (かずま); both are plausible
+N58	宇佐美和子	宇佐美	和子	ambiguous	AMBIGUOUS: 宇佐美 + 和子 OR 宇佐 + 美和子; both family names and both given names exist
+N59	新美和子	新美	和子	ambiguous	AMBIGUOUS: 新美 (にいみ) + 和子 OR 新 (あらた) + 美和子; both are plausible
+N60	西永一	西永	一	ambiguous	AMBIGUOUS: 西永 + 一 (はじめ) OR 西 + 永一 (えいいち); 西 is common, 西永 less so
