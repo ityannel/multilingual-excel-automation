@@ -1,75 +1,52 @@
-# 多言語Excelデータ自動化ツール
+This is an app to integrate multiple .xlsx files into one file, and organize the information, and make summary. It uses an AI model, Jev, which was made by TypeSafe AI, when the problem cannot be solved by rules. Now, the app is compatible only for .xlsx files written in Japanese, French, and English.
 
-日本語・フランス語・英語が混在した問い合わせExcelを、Pythonで整形・検証・統合・分類し、レポート化する。
-
-## フォルダ構成
+## Result of the final run
 
 ```
-Automation/
-├── input/            処理するExcel（サンプル3拠点分）
-├── output/           ツールが作るExcel（マスター、Issues、サマリー）
-├── archive/          処理済みファイルの保管場所
-├── answer_key/       答え合わせ用の正解表（ツールには読ませない）
-├── src/              自分で書くスクリプトの置き場所
-├── tools/            サンプルデータの生成スクリプト
-├── .venv/            Pythonの仮想環境
-├── requirements.txt  使っているライブラリとバージョン
-└── .env.example      APIキーのひな形
+36 files, 5 offices, 3 languages  ->  977 rows
+
+861 clean            (88%)
+ 18 decided by Jev    (2%)
+ 98 left for a person (10%)
 ```
 
-## 環境の使い方（PowerShell）
+## HOW TO USE
 
-仮想環境を有効にする（毎回、作業を始めるとき）:
+```powershell
 
-```
-.\.venv\Scripts\Activate.ps1
-```
+.venv\Scripts\python.exe -m pip install -r requirements.txt
 
-「スクリプトの実行が無効」というエラーが出たら、有効にせずに直接実行してもよい:
+copy .env.example .env ##please get your own!
 
-```
-.\.venv\Scripts\python.exe src\main.py
+.venv\Scripts\python.exe src\app.py
 ```
 
-サンプルデータを作り直す:
+The result is written to `output/master.xlsx`.
+
+## Folder structure
 
 ```
-.\.venv\Scripts\python.exe tools\make_sample_data.py
+.
+├── src/
+│   ├── app.py
+│   └── History/
+├── settings.xlsx         The offices, and the conventions of their countries
+├── input/                36 inquiry files: 5 offices, 3 languages
+├── output/
+│   ├── master.xlsx       The result: Summary, Data, Issues, Issues detail
+│   └── 5.x_*.xlsx
+├── tests/
+├── answer_key/
+├── tools/
+├── requirements.txt      Pinned versions. Do not upgrade numpy!!
+└── .env.example      	Rename it to .env and get paste your own JEV API key!
 ```
+## Notes
 
-## 入っているライブラリ
-
-| ライブラリ | 用途 |
-|---|---|
-| pandas | Excelの読み込み・整理・出力 |
-| openpyxl | 書式・条件付き書式・グラフ・シート作成 |
-| dateparser | 日本語・フランス語・英語の日付の解釈 |
-| langdetect | 言語判定 |
-| python-dotenv | `.env` からAPIキーを読み込む |
-
-### 注意：numpyのバージョン
-
-このパソコンでは、最新のnumpy（2.5系）がWindowsのアプリ制御にブロックされた。
-そのため numpy 2.3.5 を使っている。`requirements.txt` のバージョンは上げないこと。
-
-### Jevを使うとき
-
-1. 公式サイト（typesafe.ai）でAPIキーを取得する。
-2. `.env.example` をコピーして `.env` を作り、キーを書き込む。
-3. Python用の公式ライブラリは、公式ドキュメントに書かれているパッケージ名で入れる。
-   よく似た名前の非公式パッケージに注意。
-
-## サンプルデータ
-
-`input/` に3拠点分、合計49行（東京15・パリ18・ニューヨーク16）。拠点ごとに見出しの言語と日付の書き方が違う。
-
-| ファイル | 見出し | 日付の書き方 | その他 |
-|---|---|---|---|
-| inquiries_tokyo.xlsx | 日本語 | 年/月/日、和暦、全角 | 半角カナ・全角文字 |
-| inquiries_paris.xlsx | フランス語 | 日/月/年、「1er août 2026」 | 電話番号の列がない |
-| inquiries_newyork.xlsx | 英語 | 月/日/年、「July 14, 2026」 | |
-
-たとえば `07/08/2026` は、パリでは8月7日、ニューヨークでは7月8日になる。
-
-意図的に入れた問題（34種類、延べ59件）と、各行の正しい値は
-`answer_key/answer_key.xlsx` にある。ツールの出力と比べて正解率を出すのに使う。
+- **The file name decides the office.** `inquiries_paris_2026-03.xlsx` is read as
+  the Paris office. A file whose name matches no office in `settings.xlsx` is not
+  read; the app records the reason and continues.
+- **Do not upgrade numpy.** On my machine the newest version was blocked by
+  Windows application control, so `requirements.txt` pins 2.3.5.
+- **The app runs without an API key.** It does not stop. Every question that
+  would have gone to the model is recorded and sent to a person instead.
